@@ -1,0 +1,42 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "SathyaPriya",
+  "email": "Sathya@gmail.com",
+  "password": "123456"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "Sathya@gmail.com",
+  "password": "123456"
+}
+###
+POST http://localhost:5000/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTdkZWQxNGFjNzFhZGYyYjhlYjIxMSIsImlhdCI6MTc3OTk0OTM0NSwiZXhwIjoxNzgwNTU0MTQ1fQ.H3InsnDdgC4Lb6w6pnXBSdenPSWLKHVUSpzwF4Ampuo
+
+{
+  "name": "Gaming Mouse",
+  "description": "RGB gaming mouse",
+  "price": 999,
+  "stock": 10,
+  "imageUrl": "https://example.com/mouse.jpg"
+}
+###
+POST http://localhost:5000/api/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTdkZWQxNGFjNzFhZGYyYjhlYjIxMSIsImlhdCI6MTc3OTk0OTM0NSwiZXhwIjoxNzgwNTU0MTQ1fQ.H3InsnDdgC4Lb6w6pnXBSdenPSWLKHVUSpzwF4Ampuo
+
+{
+  "orderItems": [
+    {
+      "product": "6a17e0c747efabb3405e4ce8",
+      "quantity": 2
+    }
+  ],
+  "totalPrice": 1998
+}
